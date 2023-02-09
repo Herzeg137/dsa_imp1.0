@@ -4,7 +4,7 @@ def b_s(arr, val):
   high = len(arr) - 1
   
   while low <= high:
-    mid = low + (low + high) //2
+    mid = low + (high - low) / 2
     guess = arr[mid]
     
     if guess == val:
@@ -25,7 +25,7 @@ b_s(arr, val)
 #2 way
 def b_s(arr,low, high, val):
   while low <= high:
-    mid = low + (low + high) //2
+    mid = (low + high) / 2
     guess = arr[mid]
     
     if guess == val:
